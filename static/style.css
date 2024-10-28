@@ -1,0 +1,190 @@
+/* Gradien abu-abu dan animasi latar belakang bintang serta gelembung */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #d3d3d3, #808080); /* Gradien abu-abu */
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite; /* Animasi background */
+    overflow: auto; /* Agar elemen animasi tidak keluar dari body */
+    position: relative;
+}
+
+/* Animasi gradien abu-abu */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* CSS untuk animasi bintang berkilau */
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: sparkle 2s infinite;
+}
+
+.star:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.star:nth-child(2) {
+    top: 25%;
+    left: 50%;
+    animation-delay: 0.5s;
+}
+
+.star:nth-child(3) {
+    top: 40%;
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.star:nth-child(4) {
+    top: 60%;
+    left: 30%;
+    animation-delay: 1.5s;
+}
+
+.star:nth-child(5) {
+    top: 80%;
+    left: 80%;
+    animation-delay: 2s;
+}
+
+/* Animasi gelembung bergerak */
+@keyframes moveBubbles {
+    0% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100vh); /* Gerakkan ke atas */
+        opacity: 0;
+    }
+}
+
+.bubble {
+    position: absolute;
+    bottom: -50px; /* Mulai dari bawah */
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.4); /* Warna transparan */
+    border-radius: 50%;
+    animation: moveBubbles 8s infinite; /* Animasi gerakan */
+}
+
+.bubble:nth-child(1) {
+    left: 10%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 7s;
+}
+
+.bubble:nth-child(2) {
+    left: 30%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 5s;
+}
+
+.bubble:nth-child(3) {
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 6s;
+}
+
+.bubble:nth-child(4) {
+    left: 70%;
+    width: 15px;
+    height: 15px;
+    animation-duration: 4s;
+}
+
+.bubble:nth-child(5) {
+    left: 90%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 7.5s;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.hasil-pencarian {
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hasil-pencarian p {
+    margin-bottom: 10px;
+}

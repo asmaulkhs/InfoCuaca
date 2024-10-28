@@ -1,0 +1,14 @@
+Laporan Cuaca: {{ tanggal }} - {{ kota }}, {{ kecamatan }}
+Tanggal: {{ tanggal }}
+Kota: {{ kota }}
+Kecamatan: {{ kecamatan }}
+Cuaca Pagi: {{ cuaca_pagi }}
+Cuaca Siang: {{ cuaca_siang }}
+Cuaca Malam: {{ cuaca_malam }}
+Suhu Min: {{ suhu_min }} °C
+Suhu Max: {{ suhu_max }} °C
+Kelembapan Min: {{ kelembapan_min }} %
+Kelembapan Max: {{ kelembapan_max }} %
+Arah Angin: {{ arah_angin }}
+Kecepatan Angin Min: {{ kecepatan_angin_min }} km/h
+Kecepatan Angin Max: {{ kecepatan_angin_max }} km/h
